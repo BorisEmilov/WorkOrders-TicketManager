@@ -5,7 +5,7 @@ const UserSchema = new mongoose.Schema({
     name: {type: String, required: true},
     lastname: {type: String, required: true},
     password: {type: String, required: true},
-    role: {type: String, enum: ['FrontDev', 'BackDev', 'DBAdmin', 'Test', 'QA', 'TL', 'OPM'], required: true},
+    role: {type: String, enum: ['backEndDeveloper', 'frontEndDeveloper', 'databaseAdministrator', 'devOpsEngineer'], required: true},
     actualacces: [
         {
             toolacces: {type: String},

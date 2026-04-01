@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const TicketSchema = new mongoose.Schema({
+    ticketType: {type: String, enum: ['frontEnd', 'backEnd', 'database', 'deployment'], required: true},
     queueasociated: {type: mongoose.Schema.Types.ObjectId, ref: 'queue'},
     asignedto: {type: mongoose.Schema.Types.ObjectId, ref: 'user'},
     createdby: {type: mongoose.Schema.Types.ObjectId, ref: 'user'},

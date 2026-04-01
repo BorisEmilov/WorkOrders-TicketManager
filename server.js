@@ -8,7 +8,8 @@ connectDB();
 
 app.use(express.json());
 
-
+app.use('/api/tickets', require('./routes/ticket.routes'));
+app.use('/api/queues', require('./routes/queue.routes'));
 
 
 
